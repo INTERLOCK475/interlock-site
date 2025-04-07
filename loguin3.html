@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - INTERLOCK</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #00ffcc;
+      padding: 20px;
+      text-align: center;
+      color: #000;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .login-box {
+      background-color: #111;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffcc;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-box h2 {
+      color: #00ffcc;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background-color: #222;
+      color: #fff;
+    }
+
+    .btn {
+      background-color: #00ffcc;
+      color: #000;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .btn:hover {
+      background-color: #00bfa3;
+    }
+
+    .link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .link a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>INTERLOCK</h1>
+    <p>Internamente nos games, de olho em você</p>
+  </header>
+
+  <div class="container">
+    <div class="login-box">
+      <h2>Entrar na Conta</h2>
+      <form action="#" method="POST">
+        <input type="text" name="username" placeholder="Usuário ou Email" required />
+        <input type="password" name="password" placeholder="Senha" required />
+        <button type="submit" class="btn">Entrar</button>
+      </form>
+      <div class="link">
+        <p>Não tem uma conta? <a href="cadastro.html">Criar conta</a></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 INTERLOCK. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
