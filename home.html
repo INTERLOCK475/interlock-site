@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>INTERLOCK | Home</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0f0f0f;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 40px 20px 20px 60px;
+      text-align: center;
+      font-size: 2rem;
+      color: #00ff88;
+      border-bottom: 3px solid #00ff88;
+      position: relative;
+    }
+
+    #menuBtn {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      font-size: 22px;
+      background-color: #00ff88;
+      color: #0f0f0f;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 0 8px #00ff88;
+    }
+
+    #menuBtn:hover {
+      background-color: #00cc6a;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #151515;
+      padding: 20px;
+      box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .sidebar.active {
+      transform: translateX(0);
+    }
+
+    .sidebar a {
+      color: #ffffff;
+      padding: 10px 15px;
+      text-decoration: none;
+      font-weight: 500;
+      border-left: 4px solid transparent;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background-color: #1e1e1e;
+      border-left: 4px solid #00ff88;
+      color: #00ff88;
+    }
+
+    #closeBtn {
+      background: none;
+      border: none;
+      color: #00ff88;
+      font-size: 24px;
+      cursor: pointer;
+      align-self: flex-end;
+    }
+
+    main {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .quote-box {
+      background-color: #1c1c1c;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 30px auto;
+      max-width: 700px;
+      box-shadow: 0 0 12px #00ff88;
+    }
+
+    .quote-box h2 {
+      color: #00ff88;
+      margin-bottom: 10px;
+    }
+
+    .quote-box p {
+      font-style: italic;
+      font-size: 1.1rem;
+    }
+
+    .coming-soon {
+      margin-top: 50px;
+      background-color: #222;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #555;
+    }
+
+    .coming-soon h3 {
+      color: #00ff88;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button id="menuBtn">&#9776;</button>
+    Bem-vindo à INTERLOCK
+  </header>
+
+  <div id="sidebar" class="sidebar">
+    <button id="closeBtn">&times;</button>
+    <a href="info.html">Info</a>
+    <a href="gamestory.html">Game Story</a>
+    <a href="cadastro.html">Cadastro</a>
+    <a href="login.html">Login</a>
+    <a href="creditos.html">Créditos</a>
+    <a href="redes.html">Redes Sociais</a>
+  </div>
+
+  <main>
+    <div class="content">
+  <div class="section">
+    <h2>Palavras do Criador</h2>
+    <p>"Aqui nesta amável empresa temos o prazer enorme de dizer que criatividade pode virar realidade."</p>
+  </div>
+
+  <div class="section">
+    <h2>Informações Gerais</h2>
+    <p><strong>Data de lançamento:</strong> 01/01/2026</p>
+    <p><strong>Créditos:</strong> xxxx</p>
+    <p><strong>Detalhes do Jurassic Legends:</strong> Um jogo de terror jurássico em primeira pessoa, com sistema de sobrevivência realista, fraturas, desmaio por perda de sangue, visão premonitória e muito mais!</p>
+    <p><strong>Próximos games:</strong> Em produção</p>
+  </div>
+
+  <div class="section">
+    <h2>Como criamos o Jurassic Legends</h2>
+    <p>Jurassic Legends começou como uma simples ideia de um jogo de terror com dinossauros. Foi desenvolvido com muita dedicação usando a engine Godot, visando desempenho alto em celular e uma jogabilidade imersiva. Todos os sistemas foram pensados para criar uma experiência única e aterrorizante!</p>
+  </div>
+
+  <div class="section">
+    <h2>Sobre nossa equipe</h2>
+    <p>No momento, ainda não temos funcionários contratados. Mas a partir do próximo ano (2026), abriremos vagas para expandir nossa equipe e levar a INTERLOCK ainda mais longe!</p>
+  </div>
+
+  <div class="section">
+    <h2>Game Story e jogos por navegador</h2>
+    <p>A partir de 2026, a aba "Game Story" estará em funcionamento, com novas histórias e jogos acessíveis diretamente do navegador, para todos curtirem de forma rápida e fácil!</p>
+  </div>
+
+  <div class="section">
+    <h2>Doações</h2>
+    <p>Nossa página de doações está disponível no nosso canal do YouTube: <strong>@INTERLOCK-p7k</strong>. Qualquer valor ajuda no desenvolvimento dos nossos jogos e na publicação na Play Store!</p>
+  </div>
+</div>
+  </main>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const closeBtn = document.getElementById('closeBtn');
+
+    menuBtn.onclick = () => sidebar.classList.add('active');
+    closeBtn.onclick = () => sidebar.classList.remove('active');
+  </script>
+
+</body>
+</html>
